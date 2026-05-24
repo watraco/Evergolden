@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- 1. Google Fonts link (paste this) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="style.css">
+        <script src="js/session.js"></script>
+<script>
+  protectPage();
+</script>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <img src="images/logo 2.png" class="logo">
+            <div class="search-bar">
+            <span class="material-icons-sharp">search</span>
+            <input type="search" placeholder="Search">
+            </div>
+            <div class="profile-area">
+                <div  class="theme-btn">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                 <div class="profile">
+                    <div class="profile-photo">
+                        <img id="userImage" alt="User Image" src="">   
+                    </div>
+                    <h5 class="user-name"></h5>
+                    <span class="material-icons-sharp">expand_more</span>
+                </div>
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+            </div> 
+        </div>
+    </nav>
+    <!--END OF NAVBAR-->
+
+    <main>
+        <aside>
+          <button id="close-btn">
+            <span class="material-icons-sharp">close</span>
+          </button>
+
+          <div class="sidebar">
+            <a href="dashboard.html">
+                <span class="material-icons-sharp">dashboard</span>
+                <h4>Dashboard</h4>
+            </a>
+
+            <a href="save.html">
+                  <span class="material-icons-sharp">lock</span>
+                <h4>Savings</h4>
+            </a>
+
+            <a href="withdraw.html">
+                <span class="material-icons-sharp">account_balance_wallet</span>
+                <h4>Withdraw</h4>
+            </a>
+
+            <a href="deposit.html">
+                <span class="material-icons-sharp">south</span>
+                <h4>Deposit</h4>
+            </a>
+
+            <a href="#"  class="active">
+                <span class="material-icons-sharp">payment</span>
+                <h4>Transaction</h4>
+            </a>
+
+            <a href="message.html">
+                <span class="material-icons-sharp">message</span>
+                <h4>Message</h4>
+            </a>
+
+            <a href="#">
+                <span class="material-icons-sharp">logout</span>
+                <h4 onclick="logout()">Log Out</h4>
+            </a>
+
+
+          </div>
+          <!--END OF SIDEBAR-->
+          <div class="updates">
+<span class="material-icons-sharp">update</span>
+<h4>Updates Available</h4>
+<p>Security Updates</p>
+<p>General Updates</p>
+<a href="#">Update Now</a>
+          </div>
+        </aside>
+        <!--============END OF ASIDE========-->
+        <section class="middle ">
+<div class="header">
+    <h2>Transaction History</h2>
+
+    <input type="date">
+</div>
+   <p style="margin-bottom: 10px;">Jan - Dec</p>
+           <div class="recent-transactions transaction-middle transaction-page">
+            <div class="transaction">
+                <div class="service">
+                    <div class="icon bg-purple-light">
+                        <img src="images/logo shorti.png">
+                    </div>
+                    <div class="details">
+                        <h4>Deposit</h4>
+                        <p>20.11.2021</p>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="card bg-danger">
+                        <img src="images/visa.png">
+                    </div>
+                    <div class="details">
+                       <p>*2757</p> 
+                       <small class="text-muted">Credit Card</small>
+                    </div>
+                </div>
+                <h4 class="danger deposit-amount">-$50</h4>
+            </div>
+    <!--END OF MINUS-TRANSACTION-->
+            <div class="transaction">
+                <div class="service">
+                    <div class="icon bg-purple-light">
+                        <img src="images/logo shorti.png">
+                    </div>
+                    <div class="details">
+                        <h4>Deposit</h4>
+                        <p>20.11.2021</p>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="card bg-danger">
+                        <img src="images/visa.png">
+                    </div>
+                    <div class="details">
+                       <p>*2757</p> 
+                       <small class="text-muted">Credit Card</small>
+                    </div>
+                </div>
+                <h4 class="success deposit-amount">+$1000</h4>
+            </div>
+    <!--END OF TRANSACTION-->
+
+                <div class="transaction">
+                <div class="service">
+                    <div class="icon bg-purple-light">
+                        <img src="images/logo shorti.png">
+                    </div>
+                    <div class="details">
+                        <h4>Deposit</h4>
+                        <p>20.11.2021</p>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="card bg-danger">
+                        <img src="images/visa.png">
+                    </div>
+                    <div class="details">
+                       <p>*2757</p> 
+                       <small class="text-muted">Credit Card</small>
+                    </div>
+                </div>
+                <h4 class="danger deposit-amount">-$50</h4>
+            </div>
+    <!--END OF MINUS-TRANSACTION-->
+
+            <div class="transaction">
+                <div class="service">
+                    <div class="icon bg-purple-light">
+                        <img src="images/logo shorti.png">
+                    </div>
+                    <div class="details">
+                        <h4>Shopping</h4>
+                        <p>19.11.2021</p>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="card bg-primary2">
+                        <img src="images/visa.png">
+                    </div>
+                    <div class="details">
+                       <p>*2757</p> 
+                       <small class="text-muted">Credit Card</small>
+                    </div>
+                </div>
+                <h4 class="success deposit-amount">+$1000</h4>
+            </div>
+    <!--END OF TRANSACTION-->
+                    <div class="transaction">
+                <div class="service">
+                    <div class="icon bg-purple-light">
+                        <img src="images/logo shorti.png">
+                    </div>
+                    <div class="details">
+                        <h4>Deposit</h4>
+                        <p>20.11.2021</p>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="card bg-danger">
+                        <img src="images/visa.png">
+                    </div>
+                    <div class="details">
+                       <p>*2757</p> 
+                       <small class="text-muted">Credit Card</small>
+                    </div>
+                </div>
+                <h4 class="danger deposit-amount">-$50</h4>
+            </div>
+    <!--END OF MINUS-TRANSACTION-->
+
+            <div class="transaction">
+                <div class="service">
+                    <div class="icon bg-purple-light">
+                        <img src="images/logo shorti.png">
+                    </div>
+                    <div class="details">
+                        <h4>Restaurant</h4>
+                        <p>19.11.2021</p>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="card bg-dark">
+                        <img src="images/master card.png">
+                    </div>
+                    <div class="details">
+                       <p>*2757</p> 
+                       <small class="text-muted">Credit Card</small>
+                    </div>
+                </div>
+                <h4 class="success deposit-amount">+$1000</h4>
+            </div>
+    <!--END OF TRANSACTION-->
+            <div class="transaction">
+                <div class="service">
+                    <div class="icon bg-purple-light">
+                        <img src="images/logo shorti.png">
+                    </div>
+                    <div class="details">
+                        <h4>Games</h4>
+                        <p>15.11.2021</p>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="card bg-danger">
+                        <img src="images/visa.png">
+                    </div>
+                    <div class="details">
+                       <p>*2757</p> 
+                       <small class="text-muted">Credit Card</small>
+                    </div>
+                </div>
+                <h4 class="success deposit-amount">+$1000</h4>
+            </div>
+    <!--END OF TRANSACTION-->
+                <div class="transaction" >
+                <div class="service">
+                    <div class="icon bg-purple-light">
+                        <img src="images/logo shorti.png">
+                    </div>
+                    <div class="details">
+                        <h4>Pharmacy</h4>
+                        <p>15.11.2021</p>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="card bg-primary2">
+                        <img src="images/visa.png">
+                    </div>
+                    <div class="details">
+                       <p>*2757</p> 
+                       <small class="text-muted">Credit Card</small>
+                    </div>
+                </div>
+                <h4 class="success deposit-amount">+$1000</h4>
+            </div>
+    <!--END OF TRANSACTION-->
+
+                <div class="transaction">
+                <div class="service">
+                    <div class="icon bg-purple-light">
+                        <img src="images/logo shorti.png">
+                    </div>
+                    <div class="details">
+                        <h4>Fitness</h4>
+                        <p>19.11.2021</p>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="card bg-dark">
+                        <img src="images/master card.png">
+                    </div>
+                    <div class="details">
+                       <p>*8275</p> 
+                       <small class="text-muted">Credit Card</small>
+                    </div>
+                </div>
+                <h4 class="success deposit-amount">+$1000</h4>
+            </div>
+    <!--END OF TRANSACTION-->
+
+                    <div class="transaction">
+                <div class="service">
+                    <div class="icon bg-purple-light">
+                        <img src="images/logo shorti.png">
+                    </div>
+                    <div class="details">
+                        <h4>Fitness</h4>
+                        <p>19.11.2021</p>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="card bg-dark">
+                        <img src="images/master card.png">
+                    </div>
+                    <div class="details">
+                       <p>*8275</p> 
+                       <small class="text-muted">Credit Card</small>
+                    </div>
+                </div>
+                <h4 class="success deposit-amount">+$1000</h4>
+            </div>
+    <!--END OF TRANSACTION-->
+
+                    <div class="transaction">
+                <div class="service">
+                    <div class="icon bg-purple-light">
+                        <img src="images/logo shorti.png">
+                    </div>
+                    <div class="details">
+                        <h4>Fitness</h4>
+                        <p>19.11.2021</p>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="card bg-dark">
+                        <img src="images/master card.png">
+                    </div>
+                    <div class="details">
+                       <p>*8275</p> 
+                       <small class="text-muted">Credit Card</small>
+                    </div>
+                </div>
+                <h4 class="success deposit-amount">+$1000</h4>
+            </div>
+    <!--END OF TRANSACTION-->
+    <div class="scroll">
+        <h1 style="display: flex; align-items: center; text-align: center;"><span class="material-icons-sharp">keyboard_double_arrow_down</span>More</h1>
+    </div>
+           </div>
+<!--END OF CARDS-->
+
+
+
+
+        </section>
+<!--END OF MIDDLE-->
+
+        <section class="right" style="background-color: none;">
+           <div class="investments" style="margin-top: 20px;">
+            <div class="header">
+                <h2 class="h2">Available Saving Plans</h2>
+                <a href="#"><span class="material-icons-sharp">add</span></a>
+            </div> 
+            <div class="pop" id="saving-popup1">
+               <div class="closePopup">
+            <span class="material-icons-sharp" onclick="closePopup1()">close</span>
+            </div>
+               
+             <div class="saving-popup">
+                <img src="images/9165752.png" alt="">
+                <h1>Retirement Fund</h1>
+                <p>Secure your future with disciplined long-term savings designed for life after active work.</p>
+                <div class="popuprow">
+                    <h3><span class="popup-head">Saving Type</span><br><span class="popup-head-small">Long-Term Savings</span></h3>
+                    <h3><span class="popup-head">Risk Level</span><br><span class="popup-head-small">Low</span></h3>
+                    <h3><span class="popup-head">Expected Returns</span><br><span class="success popup-head-small" style="font-size: 10px;">8–12% yearly</span></h3>
+                </div>
+
+                    <div class="investment-progress">
+    <span><span class="user-name"></span>'s</span>
+  <div class="investment-progress-header">
+    <h4>Retirement Fund Progress</h4>
+    <span class="percent" id="percentText">45%</span>
+  </div>
+
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressFill">
+      <span class="progress-text" id="progressText">
+        $450 of $1000
+      </span>
+    </div>
+  </div>
+
+</div>
+                <h4>This plan helps you grow your money gradually over time, ensuring financial stability and peace of mind during retirement.</h4>
+                <div class="popup-benefits">
+                    <div class="popup-benefits-box">
+                        <span class="bg-primary"></span>
+                        <h3 class="popup-benefits-box-text">Capital protection</h3>
+                    </div>
+
+
+
+                    <div class="popup-benefits-box">
+                        <span class="bg-primary"></span>
+                        <h3 class="popup-benefits-box-text">Beneficiary support</h3>
+                    </div>
+
+    
+
+                </div>
+                <button type="button" class="start-saving-button active-investment"><a href="save.html">Active Plan...</a></button>
+            </div>
+            </div> 
+            <div class="investment" onclick="openPopup1()">
+
+                <img src="images/9165752.png">
+                <h4>Retirement<br>Fund</h4>
+                <div class="date-time">
+                    <p>Long-Term</p>
+                    <p>Savings</p>
+                </div>
+                <div class="bonds">
+                    <p><b>Risk</b></p>
+                    <small class="text-muted">Low</small>
+                </div>
+                <div class="amount">
+                    <h4>Returns</h4>
+                    <small class="success">+8-12% yearly</small>
+                </div>
+            </div>
+            <!--END OF INVESTMENT 1-->
+            <div class="pop" id="saving-popup2">
+               <div class="closePopup">
+            <span class="material-icons-sharp" onclick="closePopup2()">close</span>
+            </div>
+               
+             <div class="saving-popup">
+                <img src="images/2721122.png" alt="">
+                <h1>Fixed Savings</h1>
+                <p>A secure savings option that allows you lock your money for a fixed period and earn guaranteed returns.</p>
+                <div class="popuprow">
+                    <h3><span class="popup-head">Saving Type</span><br><span class="popup-head-small">Fixed-Term Savings</span></h3>
+                    <h3><span class="popup-head">Risk Level</span><br><span class="popup-head-small">Very Low</span></h3>
+                    <h3><span class="popup-head">Expected Returns</span><br><span class="success popup-head-small" style="font-size: 10px;">10% yearly</span></h3>
+                </div>
+                <h4>This plan is ideal if you want predictable growth and capital safety without exposure to market fluctuations.</h4>
+                <div class="popup-benefits">
+                    <div class="popup-benefits-box">
+                        <span class="bg-primary"></span>
+                        <h3 class="popup-benefits-box-text">Simple and transparent</h3>
+                    </div>
+
+                    <div class="popup-benefits-box">
+                        <span class="bg-primary"></span>
+                        <h3 class="popup-benefits-box-text">Guaranteed fixed returns</h3>
+                    </div>
+
+    
+
+                </div>
+                <h4>Funds are locked for the selected period to ensure disciplined saving.</h4>
+                <p>Recommended for individuals saving for short- to medium-term financial goals.</p>
+                <button type="button" class="start-saving-button"><a href="save.html">Start Savings</a></button>
+            </div>
+            </div> 
+           <div class="investment"  onclick="openPopup2()">
+                <img src="images/2721122.png">
+                <h4>Fixed Savings<br>Plan</h4>
+                <div class="date-time">
+                    <p>Fixed</p>
+                    <p>Deposit</p>
+                </div>
+                <div class="bonds">
+                    <p><b>Tenure</b></p>
+                    <small class="text-muted">10% yearly</small>
+                </div>
+                <div class="amount">
+                    <h4>Returns</h4>
+                    <small class="success">+10% yearly</small>
+                </div>
+            </div>
+            
+            <!--END OF INVESTMENT 2-->
+            <div class="pop" id="saving-popup3">
+               <div class="closePopup">
+            <span class="material-icons-sharp" onclick="closePopup3()">close</span>
+            </div>
+               
+             <div class="saving-popup">
+                <img src="images/6966266.png" alt="">
+                <h1>Legacy savings</h1>
+                <p>A long-term savings plan designed to preserve wealth and ensure your loved ones are financially protected in the future.</p>
+                <div class="popuprow">
+                    <h3><span class="popup-head">Saving Type</span><br><span class="popup-head-small">Legacy & Inheritance</span></h3>
+                    <h3><span class="popup-head">Risk Level</span><br><span class="popup-head-small">Low</span></h3>
+                    <h3><span class="popup-head">Expected Returns</span><br><span class="success popup-head-small" style="font-size: 10px;">6–9% yearly</span></h3>
+                </div>
+                <h4>This plan helps you build and protect funds that will be transferred to your beneficiaries according to your wishes.</h4>
+                <div class="popup-benefits">
+                    <div class="popup-benefits-box">
+                        <span class="bg-primary"></span>
+                        <h3 class="popup-benefits-box-text">inheritance support</h3>
+                    </div>
+
+                    <div class="popup-benefits-box">
+                        <span class="bg-primary"></span>
+                        <h3 class="popup-benefits-box-text">Beneficiary designation</h3>
+                    </div>
+                </div>
+                 <h4>Individuals planning inheritance, family support, and long-term legacy goals.</h4>
+                 <p>Funds are managed securely and released to beneficiaries based on documented instructions.</p>
+                <button type="button" class="start-saving-button"><a href="save.html">Start Savings</a></button>
+            </div>
+            </div> 
+           <div class="investment" onclick="openPopup3()">
+                <img src="images/6966266.png">
+                <h4>Legacy<br>savings</h4>
+                <div class="date-time">
+                    <p>Legacy</p>
+                    <p>Savings</p>
+                </div>
+                <div class="bonds">
+                    <p><b>Purpose</b></p>
+                    <small class="text-muted">inheritance & wills</small>
+                </div>
+                <div class="amount">
+                    <h4>Return</h4>
+                    <small class="danger">Death</small>
+                </div>
+            </div>
+            <!--END OF INVESTMENT 3-->
+            <div class="pop" id="saving-popup4">
+               <div class="closePopup">
+            <span class="material-icons-sharp" onclick="closePopup4()">close</span>
+            </div>
+               
+             <div class="saving-popup">
+                <img src="images/—Pngtree—wedding ring icon design illustration_5345012.png" alt="">
+                <h1>Goal-based savings</h1>
+                <p>A flexible savings plan that helps you save towards specific life goals at your own pace.</p>
+                <div class="popuprow">
+                    <h3><span class="popup-head">Saving Type</span><br><span class="popup-head-small">child's marriage</span></h3>
+                    <h3><span class="popup-head">Risk Level</span><br><span class="popup-head-small">Low</span></h3>
+                    <h3><span class="popup-head">Expected Returns</span><br><span class="success popup-head-small" style="font-size: 10px;">6–9% yearly</span></h3>
+                </div>
+                <h4>This plan allows you set a savings goal, choose a timeline, and contribute regularly until your target is reached.</h4>
+                <div class="popup-benefits">
+                    <div class="popup-benefits-box">
+                        <span class="bg-primary"></span>
+                        <h3 class="popup-benefits-box-text">Capital protection</h3>
+                    </div>
+
+
+
+                    <div class="popup-benefits-box">
+                        <span class="bg-primary"></span>
+                        <h3 class="popup-benefits-box-text">Flexible contribution</h3>
+                    </div>
+                </div>
+                 <h4>Individuals saving for weddings, education, projects, travel, or life events.</h4>
+                 <p>You can modify your goal or contribution plan</p>
+                <button type="button" class="start-saving-button"><a href="save.html">Start Savings</a></button>
+            </div>
+            </div> 
+            <div class="investment" onclick="openPopup4()">
+                <img src="images/—Pngtree—wedding ring icon design illustration_5345012.png">
+                <h4>Goal-based<br>savings</h4>
+                <div class="date-time">
+                    <p>Child’s</p>
+                    <p>marriage</p>
+                </div>
+                <div class="bonds">
+                    <p><b>Risk</b></p>
+                    <small class="text-muted">Low</small>
+                </div>
+                <div class="amount">
+                    <h4>Return</h4>
+                    <small class="success">6–9% yearly</small>
+                </div>
+            </div>
+            <!--END OF INVESTMENT 4-->
+            <div class="pop" id="saving-popup4">
+               <div class="closePopup">
+            <span class="material-icons-sharp" onclick="closePopup4()">close</span>
+            </div>
+               
+             <div class="saving-popup">
+                <img src="images/—Pngtree—wedding ring icon design illustration_5345012.png" alt="">
+                <h1>Goal-based savings</h1>
+                <p>A flexible savings plan that helps you save towards specific life goals at your own pace.</p>
+                <div class="popuprow">
+                    <h3><span class="popup-head">Saving Type</span><br><span class="popup-head-small">child's marriage</span></h3>
+                    <h3><span class="popup-head">Risk Level</span><br><span class="popup-head-small">Low</span></h3>
+                    <h3><span class="popup-head">Expected Returns</span><br><span class="success popup-head-small" style="font-size: 10px;">6–9% yearly</span></h3>
+                </div>
+                <h4>This plan allows you set a savings goal, choose a timeline, and contribute regularly until your target is reached.</h4>
+                <div class="popup-benefits">
+                    <div class="popup-benefits-box">
+                        <span class="bg-primary"></span>
+                        <h3 class="popup-benefits-box-text">Capital protection</h3>
+                    </div>
+
+
+
+                    <div class="popup-benefits-box">
+                        <span class="bg-primary"></span>
+                        <h3 class="popup-benefits-box-text">Flexible contribution</h3>
+                    </div>
+                </div>
+                 <h4>Individuals saving for weddings, education, projects, travel, or life events.</h4>
+                 <p>You can modify your goal or contribution plan</p>
+                <button type="button" class="start-saving-button"><a href="save.html">Start Savings</a></button>
+            </div>
+            </div> 
+            <div class="investment" onclick="openPopup4()">
+                <img src="images/224280.png">
+                <h4>Goal-based<br>savings</h4>
+                <div class="date-time">
+                    <p>Vehicle</p>
+                    <p>Purchase</p>
+                </div>
+                <div class="bonds">
+                    <p><b>Risk</b></p>
+                    <small class="text-muted">Low</small>
+                </div>
+                <div class="amount">
+                    <h4>Return</h4>
+                    <small class="success">6–9% yearly</small>
+                </div>
+            </div>
+            <!--END OF INVESTMENT 5-->
+                        <div class="pop" id="saving-popup4">
+               <div class="closePopup">
+            <span class="material-icons-sharp" onclick="closePopup4()">close</span>
+            </div>
+               
+             <div class="saving-popup">
+                <img src="images/—Pngtree—wedding ring icon design illustration_5345012.png" alt="">
+                <h1>Goal-based savings</h1>
+                <p>A flexible savings plan that helps you save towards specific life goals at your own pace.</p>
+                <div class="popuprow">
+                    <h3><span class="popup-head">Saving Type</span><br><span class="popup-head-small">child's marriage</span></h3>
+                    <h3><span class="popup-head">Risk Level</span><br><span class="popup-head-small">Low</span></h3>
+                    <h3><span class="popup-head">Expected Returns</span><br><span class="success popup-head-small" style="font-size: 10px;">6–9% yearly</span></h3>
+                </div>
+                <h4>This plan allows you set a savings goal, choose a timeline, and contribute regularly until your target is reached.</h4>
+                <div class="popup-benefits">
+                    <div class="popup-benefits-box">
+                        <span class="bg-primary"></span>
+                        <h3 class="popup-benefits-box-text">Capital protection</h3>
+                    </div>
+
+
+
+                    <div class="popup-benefits-box">
+                        <span class="bg-primary"></span>
+                        <h3 class="popup-benefits-box-text">Flexible contribution</h3>
+                    </div>
+                </div>
+                 <h4>Individuals saving for weddings, education, projects, travel, or life events.</h4>
+                 <p>You can modify your goal or contribution plan</p>
+              <button type="button" onclick="closePopup1()">Start Savings</button>
+            </div>
+            </div> 
+            <div class="investment" onclick="openPopup4()">
+                <img src="images/3778120.png">
+                <h4>Goal-based<br>savings</h4>
+                <div class="date-time">
+                    <p>Education</p>
+                </div>
+                <div class="bonds">
+                    <p><b>Risk</b></p>
+                    <small class="text-muted">Low</small>
+                </div>
+                <div class="amount">
+                    <h4>Return</h4>
+                    <small class="success">6–9% yearly</small>
+                </div>
+            </div>
+            <!--END OF INVESTMENT 6-->
+                        <div class="pop" id="saving-popup4">
+               <div class="closePopup">
+            <span class="material-icons-sharp" onclick="closePopup4()">close</span>
+            </div>
+               
+             <div class="saving-popup">
+                <img src="images/—Pngtree—wedding ring icon design illustration_5345012.png" alt="">
+                <h1>Goal-based savings</h1>
+                <p>A flexible savings plan that helps you save towards specific life goals at your own pace.</p>
+                <div class="popuprow">
+                    <h3><span class="popup-head">Saving Type</span><br><span class="popup-head-small">child's marriage</span></h3>
+                    <h3><span class="popup-head">Risk Level</span><br><span class="popup-head-small">Low</span></h3>
+                    <h3><span class="popup-head">Expected Returns</span><br><span class="success popup-head-small" style="font-size: 10px;">6–9% yearly</span></h3>
+                </div>
+                <h4>This plan allows you set a savings goal, choose a timeline, and contribute regularly until your target is reached.</h4>
+                <div class="popup-benefits">
+                    <div class="popup-benefits-box">
+                        <span class="bg-primary"></span>
+                        <h3 class="popup-benefits-box-text">Capital protection</h3>
+                    </div>
+
+
+
+                    <div class="popup-benefits-box">
+                        <span class="bg-primary"></span>
+                        <h3 class="popup-benefits-box-text">Flexible contribution</h3>
+                    </div>
+                </div>
+                 <h4>Individuals saving for weddings, education, projects, travel, or life events.</h4>
+                 <p>You can modify your goal or contribution plan</p>
+                <button type="button" class="start-saving-button"><a href="save.html">Start Savings</a></button>
+            </div>
+            </div> 
+            <div class="investment" onclick="openPopup4()">
+                <img src="images/9912615.png">
+                <h4>Goal-based<br>savings</h4>
+                <div class="date-time">
+                    <p>Project</p>
+                </div>
+                <div class="bonds">
+                    <p><b>Risk</b></p>
+                    <small class="text-muted">Low</small>
+                </div>
+                <div class="amount">
+                    <h4>Return</h4>
+                    <small class="success">6–9% yearly</small>
+                </div>
+            </div>
+            <!--END OF INVESTMENT 7-->
+                        <div class="pop" id="saving-popup4">
+               <div class="closePopup">
+            <span class="material-icons-sharp" onclick="closePopup4()">close</span>
+            </div>
+               
+             <div class="saving-popup">
+                <img src="images/—Pngtree—wedding ring icon design illustration_5345012.png" alt="">
+                <h1>Goal-based savings</h1>
+                <p>A flexible savings plan that helps you save towards specific life goals at your own pace.</p>
+                <div class="popuprow">
+                    <h3><span class="popup-head">Saving Type</span><br><span class="popup-head-small">child's marriage</span></h3>
+                    <h3><span class="popup-head">Risk Level</span><br><span class="popup-head-small">Low</span></h3>
+                    <h3><span class="popup-head">Expected Returns</span><br><span class="success popup-head-small" style="font-size: 10px;">6–9% yearly</span></h3>
+                </div>
+                <h4>This plan allows you set a savings goal, choose a timeline, and contribute regularly until your target is reached.</h4>
+                <div class="popup-benefits">
+                    <div class="popup-benefits-box">
+                        <span class="bg-primary"></span>
+                        <h3 class="popup-benefits-box-text">Capital protection</h3>
+                    </div>
+
+
+
+                    <div class="popup-benefits-box">
+                        <span class="bg-primary"></span>
+                        <h3 class="popup-benefits-box-text">Flexible contribution</h3>
+                    </div>
+                </div>
+                 <h4>Individuals saving for weddings, education, projects, travel, or life events.</h4>
+                 <p>You can modify your goal or contribution plan</p>
+                <button type="button" class="start-saving-button"><a href="save.html">Start Savings</a></button>
+            </div>
+            </div> 
+            <div class="investment" onclick="openPopup4()">
+                <img src="images/12860814.png">
+                <h4>Goal-based<br>savings</h4>
+                <div class="date-time">
+                    <p>Travel</p>
+                </div>
+                <div class="bonds">
+                    <p><b>Risk</b></p>
+                    <small class="text-muted">Low</small>
+                </div>
+                <div class="amount">
+                    <h4>Return</h4>
+                    <small class="success">6–9% yearly</small>
+                </div>
+            </div>
+            <!--END OF INVESTMENT 8-->
+                        <div class="pop" id="saving-popup4">
+               <div class="closePopup">
+            <span class="material-icons-sharp" onclick="closePopup4()">close</span>
+            </div>
+               
+             <div class="saving-popup">
+                <img src="images/—Pngtree—wedding ring icon design illustration_5345012.png" alt="">
+                <h1>Goal-based savings</h1>
+                <p>A flexible savings plan that helps you save towards specific life goals at your own pace.</p>
+                <div class="popuprow">
+                    <h3><span class="popup-head">Saving Type</span><br><span class="popup-head-small">child's marriage</span></h3>
+                    <h3><span class="popup-head">Risk Level</span><br><span class="popup-head-small">Low</span></h3>
+                    <h3><span class="popup-head">Expected Returns</span><br><span class="success popup-head-small" style="font-size: 10px;">6–9% yearly</span></h3>
+                </div>
+                <h4>This plan allows you set a savings goal, choose a timeline, and contribute regularly until your target is reached.</h4>
+                <div class="popup-benefits">
+                    <div class="popup-benefits-box">
+                        <span class="bg-primary"></span>
+                        <h3 class="popup-benefits-box-text">Capital protection</h3>
+                    </div>
+
+
+
+                    <div class="popup-benefits-box">
+                        <span class="bg-primary"></span>
+                        <h3 class="popup-benefits-box-text">Flexible contribution</h3>
+                    </div>
+                </div>
+                 <h4>Individuals saving for weddings, education, projects, travel, or life events.</h4>
+                 <p>You can modify your goal or contribution plan</p>
+                <button type="button" class="start-saving-button"><a href="save.html">Start Savings</a></button>
+            </div>
+            </div> 
+            <div class="investment" onclick="openPopup4()">
+                <img src="images/780575.png">
+                <h4>Goal-based<br>savings</h4>
+                <div class="date-time">
+                    <p>event</p>
+                </div>
+                <div class="bonds">
+                    <p><b>Risk</b></p>
+                    <small class="text-muted">Low</small>
+                </div>
+                <div class="amount">
+                    <h4>Return</h4>
+                    <small class="success">6–9% yearly</small>
+                </div>
+            </div>
+            <!--END OF INVESTMENT 9-->
+           </div>
+           <!--END OF INVESTMENT-->
+
+       
+                <!-------------------------  END OF RECENT TRANSACTION--------- -->
+        </section>
+        <!--END OF RIGHT-->
+    </main>
+    <!--===========END OF ASIDE===============-->
+<style>
+.scroll{
+display: none;
+}
+
+
+
+
+/* Chrome, Edge, Safari */
+.transaction-middle::-webkit-scrollbar {
+  width: 6px;
+}
+
+.transaction-middle::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.transaction-middle::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d4af37, #b8962e);
+  border-radius: 10px;
+}
+
+.transaction-middle::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #b8962e, #9f7f24);
+}
+
+@media screen and (max-width:600px){
+ 
+
+    .scroll h1{
+        text-align: center;
+    }
+
+    .scroll{
+        display: block;
+    height: 50px;
+    text-align: center;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+    color: #d4af37;
+    font-size: 10px;
+    animation: blinkEffect 3s infinite;
+}
+
+@keyframes blinkEffect {
+  0%   { opacity: 1; }
+  45%  { opacity: 0; }
+  50%  { opacity: 1; }
+  55%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+        .transaction-middle{
+        height: 500px;
+    }
+    main section.middle .cards .card:nth-child(2){
+display: none;
+}
+
+main .transaction-page .transaction{
+            display: grid;
+  grid-template-columns: 135px 135px 1fr;
+}
+
+.deposit-amount{
+    font-size: 12px;
+}
+
+main .transaction-page .card-details .card{
+    width: 4.6rem;
+}
+main section.middle .cards .card:nth-child(3){
+display: none;
+}
+}
+</style>
+    <script src="js/dashboard.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" 
+    integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/sidebar.js"></script>
+</body>
+</html>

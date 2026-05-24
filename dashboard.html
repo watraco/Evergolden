@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- 1. Google Fonts link (paste this) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+<body>
+
+    <!-- NOK OVERLAY -->
+<div  id="nokOverlay" class="overlay">
+  <div class="overlay-card">
+
+    <!-- Close Button -->
+    <button id="closeOverlay" class="close-btn">&times;</button>
+
+    <!-- Dynamic Greeting -->
+    <h2 id="nokGreeting">Hello, <span class="NOK"></span></h2>
+
+    <p class="sub-text">
+      You’ve been granted access as the registered next of kin.
+    </p>
+
+    <!-- SECTION -->
+    <div class="section">
+      <h3>Account Transition</h3>
+      <p>
+        You can now view and manage this savings plan. Some actions require verification to protect the funds.
+      </p>
+    </div>
+
+    <!-- POLICY -->
+    <div class="section">
+      <h3>Withdrawal Policy</h3>
+      <p>Withdrawals are only allowed after reaching <strong>70% of the goal</strong>.</p>
+
+      <ul>
+        <li>Protects the original financial plan</li>
+        <li>Prevents early depletion</li>
+        <li>Ensures meaningful returns</li>
+      </ul>
+    </div>
+
+    <!-- PROGRESS -->
+    <div class="section">
+      <h3>Current Progress</h3>
+      <p><strong id="percentText"></strong> complete</p>
+      <p>You can withdraw once it reaches 70%</p>
+    </div>
+
+    <!-- NEXT STEP -->
+    <div class="section">
+      <h3>Next Step</h3>
+      <p>Complete the claim form in your Messages section.</p>
+
+      <a href="message.html" class="leadtomessagebtn">Go to Messages</a>
+    </div>
+
+    <!-- DOCS -->
+    <div class="section">
+      <h3>Required Documents</h3>
+      <ul style="display: flex; justify-content: space-between;">
+        <li>Valid ID</li>
+        <li>Death certificate</li>
+        <li>Proof of relationship</li>
+      </ul>
+    </div>
+
+    <!-- SUPPORT -->
+    <p class="support">
+      We understand this may be a difficult time. We're here to support you.
+    </p>
+
+  </div>
+</div>
+
+
+
+
+
+    <nav>
+        <div class="container">
+            <img src="images/logo 2.png" class="logo">
+            <div class="search-bar">
+            <span class="material-icons-sharp">search</span>
+            <input type="search" placeholder="Search">
+            </div>
+            <div class="profile-area">
+                <div  class="theme-btn">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile" onclick="profilepopup()">
+                    <div class="profile-photo">
+                        <img id="userImage" alt="User Image" src="">   
+                    </div>
+                    <h5 class="user-name"></h5>
+                    <span class="material-icons-sharp">expand_more</span>
+                </div>
+                
+
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+
+            </div> 
+        </div>
+    </nav>
+    <!--END OF NAVBAR-->
+             <div class="profile-popup" id="profile-popup">
+            <div class="closePopup">
+            <span class="material-icons-sharp" style="color:rgb(189, 160, 0) ;" onclick="closeprofilepopup()">close</span>
+            </div>
+                <img id="userImage" src="images/mikel.png">
+                <h1 class="user-name" style="font-size: 15px;"></h1>
+                <div class="index-pop-popuprow">
+                    <h3><span class="popup-head">Age</span><br><span class="popup-head-small age"></span></h3>
+                    <h3><span class="popup-head">Gender</span><br><span class="popup-head-small gender"></span></h3>
+                    <h3><span class="popup-head">Nationality</span><br><span class="popup-head-small nationality"></span></h3>
+                </div>
+<h3 style="margin-top: 10px;"><span class="popup-head">Address</span><br><span class="popup-head-small address"></span></h3>
+            </div>
+    <main>
+        <aside>
+          <button id="close-btn">
+            <span class="material-icons-sharp">close</span>
+          </button>
+
+          <div class="sidebar">
+            <a href="#" class="active">
+                <span class="material-icons-sharp">dashboard</span>
+                <h4>Dashboard</h4>
+            </a>
+
+            <a href="save.html">
+                  <span class="material-icons-sharp">lock</span>
+                <h4>Savings</h4>
+            </a>
+
+            <a href="withdraw.html">
+                <span class="material-icons-sharp">account_balance_wallet</span>
+                <h4>Withdraw</h4>
+            </a>
+
+            <a href="deposit.html">
+                <span class="material-icons-sharp">south</span>
+                <h4>Deposit</h4>
+            </a>
+
+            <a href="message.html">
+                <span class="material-icons-sharp">message</span>
+                <h4>Message</h4>
+            </a>
+
+            <a href="#">
+               <span class="material-icons-sharp">logout</span>
+                <h4 onclick="logout()">Log Out</h4>
+            </a>
+          </div>
+          <!--END OF SIDEBAR-->
+          <div class="updates">
+<span class="material-icons-sharp">update</span>
+<h4>Updates Available</h4>
+<p>Security Updates</p>
+<p>General Updates</p>
+<a href="#">Update Now</a>
+          </div>
+        </aside>
+        <!--============END OF ASIDE========-->
+        <section class="middle">
+<div class="header">
+    <h1>Welcome <span class="username"></span></h1>
+</div>
+<div class="cards">
+    <div class="card">
+        
+        <span class="material-icons-outlined locked">lock</span>
+      <div class="top">
+        <div class="left">
+            <img id="currencyleft" src="">
+            <h2 class="left-money-name"></h2>
+        </div>
+        <img src="images/visa.png" class="right">
+      </div>
+      <div class="middle">
+        <h1 class="amount-h1 btc-balance">$827,199</h1>
+        <div class="chip">
+        <img src="images/card chip.png">
+         </div>
+      </div>
+      <div class="bottom">
+        <div class="left">
+            <small>Card Holder</small>
+            <h5 class="user-name"></h5>
+        </div>
+        <div class="right">
+            <div class="expiry">
+            <small>Expiry</small>
+            <h5>8/12</h5> 
+            </div>
+
+            <div class="cvv">
+            <small>CVV</small>
+            <h5>123</h5> 
+            </div>
+        </div>
+      </div>
+    </div>
+    <!--END OF CARD 1-->
+
+        <div class="card">
+                    <span class="material-icons-outlined locked">lock</span>
+      <div class="top">
+        <div class="left">
+            <img id="currencymiddle" src="" alt="">
+            <h2 class="middle-money-name"></h2>
+        </div>
+        <img src="images/master card.png" class="right">
+      </div>
+      <div class="middle">
+        <h1 class="amount-h1 eth-balance">$95,623</h1>
+        <div class="chip">
+        <img src="images/card chip.png">
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="left">
+            <small>Card Holder</small>
+            <h5 class="user-name"></h5>
+        </div>
+        <div class="right">
+            <div class="expiry">
+            <small>Expiry</small>
+            <h5>8/12</h5> 
+            </div>
+
+            <div class="cvv">
+            <small>CVV</small>
+            <h5>123</h5> 
+            </div>
+        </div>
+      </div>
+    </div>
+    <!--END OF CARD 2-->
+
+
+        <div class="card">
+                    <span class="material-icons-outlined locked">lock</span>
+      <div class="top">
+        <div class="left">
+            <img id="currencyright" src="" alt="">
+            <h2 class="right-money-name"></h2>
+        </div>
+        <img src="images/visa.png" class="right">
+      </div>
+      <div class="middle">
+        <h1 class="amount-h1 visa-balance">$74,384</h1>
+        <div class="chip">
+        <img src="images/card chip.png">
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="left">
+            <small>Card Holder</small>
+            <h5 class="user-name"></h5>
+        </div>
+        <div class="right">
+            <div class="expiry">
+            <small>Expiry</small>
+            <h5>8/24</h5> 
+            </div>
+
+            <div class="cvv">
+            <small>CVV</small>
+            <h5>123</h5> 
+            </div>
+        </div>
+      </div>
+    </div>
+    <!--END OF CARD  3-->
+    
+</div>
+<!--END OF CARDS-->
+
+
+
+
+<canvas id="chart"></canvas>
+        </section>
+<!--END OF MIDDLE-->
+
+        <section class="right">
+           <div class="investments">
+            <div class="header">
+                <h2>Saving Plan</h2>
+                <a href="save.html">More <span class="material-icons-sharp">chevron_right</span></a>
+            </div> 
+            <div class="investment">
+
+                <img class="plan-logo" src="">
+                <h4 class="planname"></h4>
+                <div class="date-time">
+                    <p class="period"></p>
+                </div>
+                <div class="bonds">
+                    <p id><b>Risk</b></p>
+                    <small class="text-muted risk"></small>
+                </div>
+                <div class="amount">
+                    <h4>Returns</h4>
+                    <small class="success returns"></small>
+                </div>
+                    <div class="active-box">Active</div>
+       
+            </div>
+            <!--END OF INVESTMENT 1-->
+
+           </div>
+           <!--END OF INVESTMENT-->
+
+
+           
+             <div class="index-pop-saving-popup">
+                <img class="plan-logo" src="">
+                <h1 class="planname"></h1>
+                <div class="index-pop-popuprow">
+                    <h3><span class="popup-head">Saving Type</span><br><span class="popup-head-small period"></span></h3>
+                    <h3><span class="popup-head">Risk Level</span><br><span class="popup-head-small risk"></span></h3>
+                    <h3><span class="popup-head">Expected Returns</span><br><span class="success popup-head-small returns" style="font-size: 10px;"></span></h3>
+                </div>
+
+                <h1> <span></span> </h1>
+
+    <div class="investment-progress">
+    <span class="investment-progress-user-name"><span class="user-name"></span> stay consistent to hit your target sooner.</span>
+    <div class="investment-progress-header">
+    <h4><span id="planname"></span> Progress</h4>
+    <span class="progress-percent" id="percentText">45%</span>
+    </div>
+
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressFill">
+      <span class="progress-text" id="progressText">
+        $450 of $1000
+      </span>
+    </div>
+  </div>
+
+    </div>
+                <button style="color: white;" type="button" class="start-saving-button active-investment">My Plan...</button>
+            </div>
+        
+<!------------------------- SIDE-VIEW-index-pop-saving  --------- -->
+
+
+
+        </section>
+        <!--END OF RIGHT-->
+    </main>
+    <!--===========END OF ASIDE===============-->
+
+<script src="js/user.js"></script>
+<script src="js/session.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/chart1.js"></script>   
+    <script src="js/dashboard.js"></script> 
+   <script src="js/progress.js"></script>       
+    <script src="js/theme.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/sidebar.js"></script>
+</body>
+</html>

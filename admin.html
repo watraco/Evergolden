@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+         <!-- 1. Google Fonts link (paste this) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="style.css">
+        <script src="js/session.js"></script>
+<script>
+  protectPage();
+</script>
+</head>
+<body>
+    <div class="admin-container">
+
+  <h2>Create New User</h2>
+
+  <form id="createUserForm">
+
+    <!-- BASIC INFO -->
+    <h3>Basic Info</h3>
+
+    <input type="text" name="username" placeholder="Username" required>
+    <input type="text" name="password" placeholder="Password" required>
+    <input type="text" name="name" placeholder="Full Name" required>
+
+    <!-- PLAN TYPE -->
+    <h3>Plan</h3>
+
+    <label><input type="radio" name="plan" value="retirement" required> Retirement</label>
+    <label><input type="radio" name="plan" value="childMarriage"> Child Marriage</label>
+
+    <!-- NOK -->
+    <div id="nokField">
+      <input type="text" name="nok" placeholder="Next of Kin">
+    </div>
+
+    <!-- BALANCES -->
+    <h3>Balances</h3>
+
+    <input type="number" name="btc" placeholder="BTC Balance">
+    <input type="number" name="eth" placeholder="ETH Balance">
+    <input type="number" name="visa" placeholder="VISA Balance">
+
+    <!-- SAVINGS PROGRESS -->
+    <h3>Savings Progress</h3>
+
+    <label>Saved</label>
+    <input type="range" name="saved" min="0" max="10000">
+
+    <label>Goal</label>
+    <input type="number" name="goal" placeholder="Goal">
+
+    <!-- PERSONAL DETAILS -->
+    <h3>Personal Details</h3>
+
+    <input type="number" name="age" placeholder="Age">
+
+    <select name="gender">
+      <option value="">Select Gender</option>
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+
+    <input type="text" name="nationality" placeholder="Nationality">
+    <input type="text" name="address" placeholder="Address">
+
+    <!-- PLAN DETAILS -->
+    <h3>Plan Details</h3>
+
+    <input type="text" name="period" placeholder="Period">
+    
+    <select name="risk">
+      <option>Low</option>
+      <option>Medium</option>
+      <option>High</option>
+    </select>
+
+    <input type="text" name="returns" placeholder="Expected Returns">
+
+    <!-- IMAGES -->
+    <h3>Images</h3>
+
+    <input type="text" name="userImage" placeholder="Profile Image URL">
+    <input type="text" name="planLogo" placeholder="Plan Logo URL">
+
+    <!-- SUBMIT -->
+    <button type="submit">Create User</button>
+
+  </form>
+
+  <style>
+    .admin-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.admin-container input,
+.admin-container select,
+.admin-container button {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+}
+
+h3 {
+  margin-top: 20px;
+}
+  </style>
+
+</div>
+
+<script src="js/user.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/popup.js"></script>
+<script src="js/sidebar.js"></script>
+</body>
+</html>

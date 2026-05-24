@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- 1. Google Fonts link (paste this) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <img src="images/logo 2.png" class="logo">
+            <div class="search-bar">
+            <span class="material-icons-sharp">search</span>
+            <input type="search" placeholder="Search">
+            </div>
+            <div class="profile-area">
+                <div  class="theme-btn">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                 <div class="profile" onclick="profilepopup()">
+                    <div class="profile-photo">
+                        <img id="userImage" alt="User Image" src="">   
+                    </div>
+                    <h5 class="user-name"></h5>
+                    <span class="material-icons-sharp">expand_more</span>
+                </div>
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+            </div> 
+        </div>
+    </nav>
+    <!--END OF NAVBAR-->
+             <div class="profile-popup" id="profile-popup">
+            <div class="closePopup">
+            <span class="material-icons-sharp" style="color:rgb(189, 160, 0) ;" onclick="closeprofilepopup()">close</span>
+            </div>
+                <img id="userImage" src="images/mikel.png">
+                <h1 class="user-name" style="font-size: 15px;"></h1>
+                <div class="index-pop-popuprow">
+                    <h3><span class="popup-head">Age</span><br><span class="popup-head-small age"></span></h3>
+                    <h3><span class="popup-head">Gender</span><br><span class="popup-head-small gender"></span></h3>
+                    <h3><span class="popup-head">Nationality</span><br><span class="popup-head-small nationality"></span></h3>
+                </div>
+<h3 style="margin-top: 10px;"><span class="popup-head">Address</span><br><span class="popup-head-small address"></span></h3>
+            </div>
+    <main>
+        <aside>
+          <button id="close-btn">
+            <span class="material-icons-sharp">close</span>
+          </button>
+
+          <div class="sidebar">
+            <a href="dashboard.html">
+                <span class="material-icons-sharp">dashboard</span>
+                <h4>Dashboard</h4>
+            </a>
+
+            <a href="save.html">
+                  <span class="material-icons-sharp">lock</span>
+                <h4>Savings</h4>
+            </a>
+
+            <a href="#"  class="active">
+                <span class="material-icons-sharp">account_balance_wallet</span>
+                <h4>Withdraw</h4>
+            </a>
+
+            <a href="deposit.html">
+                <span class="material-icons-sharp">south</span>
+                <h4>Deposit</h4>
+            </a>
+
+
+            <a href="message.html">
+                <span class="material-icons-sharp">message</span>
+                <h4>Message</h4>
+            </a>
+
+            <a href="#">
+<span class="material-icons-sharp">logout</span>
+                <h4 onclick="logout()">Log Out</h4>
+            </a>
+
+
+          </div>
+          <!--END OF SIDEBAR-->
+          <div class="updates">
+<span class="material-icons-sharp">update</span>
+<h4>Updates Available</h4>
+<p>Security Updates</p>
+<p>General Updates</p>
+<a href="#">Update Now</a>
+          </div>
+        </aside>
+        <!--============END OF ASIDE========-->
+        <section class="middle">
+<div class="header">
+    <h1>Hello <span class="username"></span></h1>
+</div>
+<div class="cards">
+    <div class="card">
+        
+        <span class="material-icons-outlined locked">lock</span>
+      <div class="top">
+        <div class="left">
+            <img id="currencyleft" src="" alt="">
+            <h2 class="left-money-name"></h2>
+        </div>
+        <img src="images/visa.png" class="right">
+      </div>
+      <div class="middle">
+        <h1 class="amount-h1">$827,199</h1>
+        <div class="chip">
+        <img src="images/card chip.png">
+         </div>
+      </div>
+      <div class="bottom">
+        <div class="left">
+            <small>Card Holder</small>
+            <h5 class="user-name"></h5>
+        </div>
+        <div class="right">
+            <div class="expiry">
+            <small>Expiry</small>
+            <h5>8/12</h5> 
+            </div>
+
+            <div class="cvv">
+            <small>CVV</small>
+            <h5>123</h5> 
+            </div>
+        </div>
+      </div>
+    </div>
+    <!--END OF CARD 1-->
+
+        <div class="card">
+        <span class="material-icons-outlined locked">lock</span>
+      <div class="top">
+        <div class="left">
+            <img id="currencymiddle" src="" alt="">
+            <h2 class="middle-money-name"></h2>
+        </div>
+        <img src="images/master card.png" class="right">
+      </div>
+      <div class="middle">
+        <h1 class="amount-h1">$95,623</h1>
+        <div class="chip">
+        <img src="images/card chip.png">
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="left">
+            <small>Card Holder</small>
+            <h5 class="user-name"></h5>
+        </div>
+        <div class="right">
+            <div class="expiry">
+            <small>Expiry</small>
+            <h5>8/12</h5> 
+            </div>
+
+            <div class="cvv">
+            <small>CVV</small>
+            <h5>123</h5> 
+            </div>
+        </div>
+      </div>
+    </div>
+    <!--END OF CARD 2-->
+
+
+        <div class="card">
+                    <span class="material-icons-outlined locked">lock</span>
+      <div class="top">
+        <div class="left">
+            <img id="currencyright" src="" alt="">
+            <h2 class="right-money-name"></h2>
+        </div>
+        <img src="images/visa.png" class="right">
+      </div>
+      <div class="middle">
+        <h1 class="amount-h1">$74,384</h1>
+        <div class="chip">
+        <img src="images/card chip.png">
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="left">
+            <small>Card Holder</small>
+            <h5 class="user-name"></h5>
+        </div>
+        <div class="right">
+            <div class="expiry">
+            <small>Expiry</small>
+            <h5>8/24</h5> 
+            </div>
+
+            <div class="cvv">
+            <small>CVV</small>
+            <h5>123</h5> 
+            </div>
+        </div>
+      </div>
+    </div>
+    <!--END OF CARD  3-->
+    
+</div>
+<!--END OF CARDS-->
+
+<!-- END OF MONTHLY REPORT-->
+
+<div class="saving-reg-cont">
+<h2 class="h2" style="margin-bottom: 5px;">Withdrawal Request</h2>
+<span>NOTE: <span class="danger">Takes 4-5 working days for request to be accepted</span></span>
+
+<form class="withdraw-form" >
+    <div class="saving-reg-user-details">
+      <div class="user-details-input-box">
+        <div style="display: flex; align-items: center;  gap: 3px;">
+    <span class="input-box-details">First Name</span><span class="danger" style="font-size: 8px;">(required)</span>
+</div>
+    <input type="text">
+</div>
+<div class="user-details-input-box">
+        <div style="display: flex; align-items: center;  gap: 3px;">
+    <span class="input-box-details">Lastname</span>
+    <span class="danger" style="font-size: 8px;">(required)</span>
+</div>
+    <input type="text">
+</div>  
+    </div>
+    
+    <div class="category category-withdraw-img">
+ <img src="images/PayPal.svg.png" alt="">
+ <img src="images/Apple_Pay-Logo.wine.png" alt="">
+ <img src="images/6124998.png" alt="">
+ <img src="images/skrill-logo_brandlogos.net_chasl-512x512.png" alt="">
+    </div>
+    <div class="saving-reg-user-details">
+    <div class="select-bank-dropdown">
+  <div class="select-bank-dropdown-input" id="select-bank-dropdownInput">
+        <span class="material-icons-sharp select-bank-icon">account_balance_wallet</span>
+    <span class="placeholder" id="selectedValue">Choose payment method</span>
+    <span class="material-icons-sharp arrow">expand_more</span>
+  </div>
+
+  <ul class="select-bank-dropdown-menu" id="dropdownMenu">
+    <li data-value="PayPal">PayPal</li>
+    <li data-value="Apple Pay">BTC</li>
+    <li data-value="Apple Pay">Bank Wire</li>    
+    <li data-value="Apple Pay">Apple Pay</li>
+    <li data-value="Google Pay">Google Pay</li>
+    <li data-value="Skrill">Skrill</li>
+  </ul>
+</div>
+<div class="amount-box-cont">
+   <p>Amount (USD)</p>  
+<div class="amount-box">   
+  <div class="btn minus" id="minusBtn">−</div>
+
+  <div class="amount-box-amount">
+
+    <input
+      type="text"
+      id="amountInput"
+      value="$ 70"
+      min="0"
+      step="5"
+    />
+  </div>
+
+  <div class="btn plus" id="plusBtn">+</div>
+</div>
+</div>
+</div>
+
+
+<div class="forms-button">
+    <input type="button" value="Request" onclick="withdraw()">
+</div>
+            <div class="pop" id="saving-popup-withdraw" style="border: 3px solid red;">
+               <div class="closePopup">
+            <span class="material-icons-sharp" onclick="closewithdraw()">close</span>
+            </div>
+               
+             <div class="saving-popup" >
+                <img src="images/3d-warning-or-danger-risk-message-alert-problem-icon-png.png" alt="">
+                <h1 style="color: red;">Opps!!</h1>
+                <p>A secure savings option that allows you lock your money for a fixed period and earn guaranteed returns.</p>
+
+                <h4>This plan is ideal if you want predictable growth and capital safety without exposure to market fluctuations.</h4>
+                <h4>Funds are locked for the selected period to ensure disciplined saving.</h4>
+                <p>Recommended for individuals saving for short- to medium-term financial goals.</p>
+              <a href="deposit.html"><input class="Proceed" type="button"  style="" value="Proceed"></a>
+            </div>
+            </div>
+        
+        </form>
+</div>
+
+
+
+<!--END OF MIDDLE-->
+        </section>
+        <section class="right" style="background-color: none;">
+           <div class="investments" style="width: 95%; height: 80%;  align-items: center;
+    display: flex;               
+    flex-direction: column; justify-content: center; justify-self: center; align-self: center;" >
+          <h2 style="text-align: center; ">No Data</h2>
+            <!--END OF INVESTMENT 9-->
+           </div>
+           <!--END OF INVESTMENT-->
+
+       
+                <!-------------------------  END OF RECENT TRANSACTION--------- -->
+        </section>
+        <!--END OF RIGHT-->
+    </main>
+    <!--===========END OF ASIDE===============-->
+<style>
+
+    .select-bank{
+        width: fit-content;
+        padding: 15px;
+        padding-left: 20px;
+        border-radius: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.199);
+        display: flex;
+    }
+
+        .Select-bank-dropdown{
+        width: 200px;
+        margin-left: 10px;
+    }
+    .category-withdraw-img img{
+        width: 85px;
+    }
+
+    .category-withdraw-img{
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        display: flex;
+        gap: 50px;
+    }
+
+@media screen and (max-width:600px){
+        .category-withdraw-img img{
+        width: 70px;
+    }
+
+    .right{
+        display: none;
+    }
+
+    .category-withdraw-img{
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        display: flex;
+        gap: 10px;
+    }
+    main section.middle .cards .card:nth-child(1){
+display: none;
+}
+
+main section.middle .cards .card:nth-child(3){
+display: none;
+}
+}
+</style>
+<script src="js/user.js"></script>
+<script src="js/session.js"></script>   
+    <script src="js/dashboard.js"></script>    
+    <script src="js/theme.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/amount.js"></script>
+    <script src="js/dropdown.js"></script>
+</body>
+</html>

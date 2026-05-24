@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+         <!-- 1. Google Fonts link (paste this) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/5024ee13d3.js" crossorigin="anonymous">  </script> 
+
+    <!--STYLESHEET-->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loginpage-container">
+        <div class="login-form-box login">
+            <div class="loginformm">
+                <h1>login</h1>
+                <div class="loginpage-input-box">
+                    <input id="username" type="text" placeholder="username" required>
+                   <span class="material-icons-sharp">person</span> 
+                </div>
+                
+                <div class="loginpage-input-box">
+                    <input id="password" type="password" placeholder="Password" required>
+                    <span class="material-icons-sharp">lock</span>
+                </div>
+                <div class="forgot-link">
+                    <a href="">Forget password</a>
+                </div>
+                <button type="submit" class="loginpage-btn" onclick="loginUser()">Login</button>
+               <p>or login with social platforms</p>
+               <div class="social-icons">
+                <a href="" onclick="error()" class="fa-brands fa-linkedin"></a>
+                <a href="" class="fa-brands fa-google"></a>
+                <a href="" class="fa-brands fa-facebook"></a>
+                <a href="" class="fa-brands fa-twitter"></a>
+               </div>
+            </div>
+        </div>
+
+         <div class="login-form-box loginpage-register">
+            <div class="loginformm">
+                <h1>Registration</h1>
+                <div class="loginpage-input-box">
+                    <input type="text" placeholder="username" required>
+                    <span class="material-icons-sharp">person</span>  
+                </div>
+
+                <div class="loginpage-input-box">
+                    <input type="email" placeholder="Email" required>
+                   <span class="material-icons-sharp">mail</span> 
+                </div>
+
+                <div class="loginpage-input-box">
+                    <input type="password" placeholder="Password" required>
+                    <span class="material-icons-sharp">lock</span>
+                </div>
+                <button type="submit" class="loginpage-btn">Login</button>
+               <p>or login with social platforms</p>
+               <div class="social-icons">
+                <a href="" onclick="error()" class="fa-brands fa-linkedin"></a>
+                <a href="" class="fa-brands fa-google"></a>
+                <a href="" class="fa-brands fa-facebook"></a>
+                <a href="" class="fa-brands fa-twitter"></a>
+               </div>
+            </div>
+        </div>
+
+        <div class="toggle-box">
+            <div class="toggle-panel toggle-left">
+                <h1>Hello, Welcome!</h1>
+                <p style="color: white;">Don't have an account?</p>
+                <button class="loginpage-btn register-btn">Register</button>
+                                <p style="color: black;">
+                    <a style="text-decoration: none; color: black;" href="index.html">
+                        <i class="fa-sharp fa-solid fa-arrow-left">Back Home
+                        </i>
+                        </a></p>
+            </div>
+        </div>
+        <div class="toggle-box">
+            <div class="toggle-panel toggle-right">
+                <h1>Welcome Back!</h1>
+                <p style="color: white;">Already have an account?</p>
+                <button class="loginpage-btn login-btn">Login</button>
+                 <p style="color: black;">
+                    <a style="text-decoration: none; color: black;" href="index.html">
+                        <i class="fa-sharp fa-solid fa-arrow-left">Back Home
+                        </i>
+                        </a></p>
+            </div>
+        </div>
+    </div>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:sans-serif;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+
+        
+    </style>
+<script src="js/user.js"></script>
+<script src="js/login.js"></script>
+<script src="js/popup1.js"></script>
+
+    <script>
+        const container = document.querySelector('.loginpage-container');
+        const registerBtn = document.querySelector('.register-btn');
+        const loginBtn = document.querySelector('.login-btn');
+
+        registerBtn.addEventListener('click', () =>{
+            container.classList.add('active');
+        });
+
+                loginBtn.addEventListener('click', () =>{
+            container.classList.remove('active');
+        });
+
+
+    </script>
+</body>
+</html>

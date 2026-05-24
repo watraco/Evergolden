@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why Watraco</title>
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<section class="services-section">
+  <div class="services-container">
+
+    <div class="services-grid">
+
+      <!-- CARD 1 -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="images/truck.jpg" alt="Truck Insurance">
+        </div>
+        <h3>TRUCK INSURANCE</h3>
+        <p>
+          Watraco ensures peace of mind with fully insured trucks, protecting
+          your cargo against accidents, damage, loss, and liabilities.
+        </p>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="images/plane.jpg" alt="Plane Transportation">
+        </div>
+        <h3>PLANE TRANSPORTATION</h3>
+        <p>
+          Watraco offers fast, reliable air freight services with insured
+          planes, ensuring your cargo arrives safely and always on time.
+        </p>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="images/ship.jpg" alt="Sea Freight">
+        </div>
+        <h3>SEA & FREIGHT</h3>
+        <p>
+          Our sea freight services leverage modern, insured vessels, ensuring
+          safe, large-volume cargo transport across global waters.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+    .services-section {
+  padding: 100px 20px;
+  background: #ffffff;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto; /* TRUE CENTER */
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* CARD */
+.service-card {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.service-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* IMAGE */
+.service-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.06);
+}
+
+/* TEXT */
+.service-card h3 {
+  margin-top: 22px;
+  margin-bottom: 14px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #1e88e5; /* matches screenshot blue */
+}
+
+.service-card p {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #9a9a9a;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .service-image {
+    height: 260px;
+  }
+}
+
+</style>
+
+
+<script>
+const cards = document.querySelectorAll('.service-card');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.2 });
+
+cards.forEach(card => observer.observe(card));
+</script>
+
+
+</body>
+</html>

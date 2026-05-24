@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>message & Discount | Evergolden</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="message-page">
+    <!-- message Card 1 -->
+    <div class="message-card blue">
+      <span class="badge"></span>
+
+      <div class="message-main">
+        <div>
+          <small>30% OFF</small>
+          <h3>Summer message</h3>
+          <p>Get discount for every topup, transfer and payment</p>
+        </div>
+        <div class="percent">30%</div>
+      </div>
+
+      <button class="expand-btn">View Details</button>
+
+      <div class="message-expand">
+        <p>Use this message to get 30% off your transactions.</p>
+        <button class="apply-btn">Use message</button>
+      </div>
+    </div>
+
+    <!-- message Card 2 -->
+    <div class="message-card red">
+      <span class="badge"></span>
+
+      <div class="message-main">
+        <div>
+          <small>35% OFF</small>
+          <h3>Today’s Special</h3>
+          <p>Get discount for every topup, transfer and payment</p>
+        </div>
+        <div class="percent">35%</div>
+      </div>
+
+      <button class="expand-btn">View Details</button>
+
+      <div class="message-expand">
+        <p>Special discount available today only.</p>
+        <button class="apply-btn">Use message</button>
+      </div>
+    </div>
+
+    <!-- message Card 3 -->
+    <div class="message-card purple used">
+      <span class="badge"></span>
+
+      <div class="message-main">
+        <div>
+          <small>25% OFF</small>
+          <h3>Golden Week</h3>
+          <p>Get a discount on every purchase with a minimum spend of $120</p>
+        </div>
+        <div class="percent">25%</div>
+      </div>
+
+      <button class="expand-btn">View Details</button>
+
+      <div class="message-expand">
+        <p>Valid for purchases above $120.</p>
+        <button class="apply-btn">Use message</button>
+      </div>
+    </div>
+
+  </div>
+<style>
+ 
+
+</style>
+  <!-- JS order matters -->
+     <script>
+
+document.querySelectorAll(".expand-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const card = btn.closest(".message-card");
+
+    // close other cards
+    document.querySelectorAll(".message-card").forEach(c => {
+      if (c !== card) c.classList.remove("active");
+    });
+
+    // toggle current
+    card.classList.toggle("active");
+
+    btn.innerText = card.classList.contains("active")
+      ? "Close"
+      : "View Details";
+  });
+});
+
+  </script>
+
+</body>
+</html>

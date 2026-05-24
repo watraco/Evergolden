@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- 1. Google Fonts link (paste this) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="style.css">
+        <script src="js/session.js"></script>
+<script>
+  protectPage();
+</script>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <img src="images/logo 2.png" class="logo">
+            <div class="search-bar">
+            <span class="material-icons-sharp">search</span>
+            <input type="search" placeholder="Search">
+            </div>
+            <div class="profile-area">
+                <div  class="theme-btn">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                 <div class="profile">
+                    <div class="profile-photo">
+                        <img id="userImage" alt="User Image" src="">   
+                    </div>
+                    <h5 class="user-name"></h5>
+                    <span class="material-icons-sharp">expand_more</span>
+                </div>
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+            </div> 
+        </div>
+    </nav>
+    <!--END OF NAVBAR-->
+
+    <main>
+        <aside>
+          <button id="close-btn">
+            <span class="material-icons-sharp">close</span>
+          </button>
+
+          <div class="sidebar">
+            <a href="dashboard.html">
+                <span class="material-icons-sharp">dashboard</span>
+                <h4>Dashboard</h4>
+            </a>
+
+            <a href="save.html">
+                  <span class="material-icons-sharp">lock</span>
+                <h4>Savings</h4>
+            </a>
+
+            <a href="withdraw.html">
+                <span class="material-icons-sharp">account_balance_wallet</span>
+                <h4>Withdraw</h4>
+            </a>
+
+            <a href="deposit.html">
+                <span class="material-icons-sharp">account_balance_wallet</span>
+                <h4>Deposit</h4>
+            </a>
+
+
+            <a href="#"  class="active">
+                <span class="material-icons-sharp">message</span>
+                <h4>Message</h4>
+            </a>
+
+            <a href="#">
+                <span class="material-icons-sharp">logout</span>
+                <h4 onclick="logout()">Log Out</h4>
+            </a>
+
+
+          </div>
+          <!--END OF SIDEBAR-->
+          <div class="updates">
+<span class="material-icons-sharp">update</span>
+<h4>Updates Available</h4>
+<p>Security Updates</p>
+<p>General Updates</p>
+<a href="#">Update Now</a>
+          </div>
+        </aside>
+        <!--============END OF ASIDE========-->
+        <section class="middle ">
+<div class="header">
+    <h2>Messages</h2>
+</div>
+
+
+  <div class="message-page">
+    <!-- message Card 1 -->
+<div id="retirementForm nokForm" class="message-card blue hidden" >
+  <span class="badge NOK"></span>
+
+  <div class="message-main">
+    <div>
+      <small><span class="user-name"></span>'s Retirement</small>
+      <h3>Next of kin Form</h3>
+      <p>This should be filled by the next of kin stated above</p>
+    </div>
+    <div class="percent"></div>
+  </div>
+
+  <button class="expand-btn">Fill Form</button>
+
+  <div class="message-expand">
+    <form>
+
+      <div class="message-form">
+        <!-- LEFT SIDE (NAME DISPLAY) -->
+ 
+
+        <!-- RIGHT SIDE (FORM) -->
+        <div class="form-fields">
+       <div class="user-name-container">
+          <h1 class=" user-message-h1">Hello <span class="NOK"></span></h1>
+          <p class="user-message-p">I have chosen you as my next of kin 
+            ipsum dolor sit amet consectetur hfgggf ffhhuiee fhj
+            adipisicing elit. Incidunt quos id asperiores. jsoec
+            Lorem ipsum dolor sit, amet consectetur adipisicing 
+            elit. Maiores, officia ex? Rerum labore distinctio 
+            minus vero. Officia amet odit voluptatem maiores 
+            tenetur quis et. Sit recusandae officia ea placeat 
+            quas.</p>
+        </div>
+          <div class="form-group">
+            <label>Full Name <span class="danger">(required)</span></label>
+            <input type="text" name="name" placeholder="Enter your name" required>
+          </div>
+
+          <div class="form-group">
+            <label>Date of birth <span class="danger">(required)</span></label>
+            <input type="date" name="dob" placeholder="Enter your username" required>
+          </div>
+
+          <div class="form-group">
+            <label>Relative <span class="danger">(required)</span></label>
+            <input type="number" name="relative" placeholder="E.G brother,sister" required>
+          </div>
+
+          <div class="form-group">
+            <label>SSN <span class="danger">(required)</span></label>
+            <input type="number" name="ssn" placeholder="social security number" required>
+          </div>
+
+
+          <div class="form-group">
+            <label>Phone number <span class="danger">(required)</span></label>
+            <input type="text" name="phone-number" placeholder="phone number" required>
+          </div>
+
+          <div class="form-group">
+            <label>Email <span class="danger">(required)</span></label>
+            <input type="email" name="email" placeholder="Enter your email" required>
+          </div>
+
+          <div class="btn-wrapper">
+          <input class="message-btn-fill-form" type="button" value="Submit">
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+
+    </form>
+  </div>
+</div>
+
+
+    <!-- message Card 2 -->
+<div id="childForm" class="message-card red hidden">
+  <span class="badge"></span>
+
+  <div class="message-main">
+    <div>
+      <small><span class="user-name"></span> child's marraige fund </small>
+      <h3>child's partner Form</h3>
+      <p>This should be filled by the wife/husband of the child</p>
+    </div>
+  </div>
+
+  <button class="expand-btn">Fill Form</button>
+
+  <div class="message-expand">
+    <form>
+
+      <div class="message-form">
+
+        <!-- LEFT SIDE (FORM) -->
+        <div class="form-fields">
+
+          <div class="form-group">
+            <label>Full Name <span class="danger">(required)</span></label>
+            <input type="text" placeholder="Enter your name" required>
+          </div>
+
+          <div class="form-group">
+            <label>Username <span class="danger">(required)</span></label>
+            <input type="text" placeholder="Enter your username" required>
+          </div>
+
+          <div class="form-group">
+            <label>Email <span class="danger">(required)</span></label>
+            <input type="email" placeholder="Enter your email" required>
+          </div>
+
+        </div>
+
+        <!-- RIGHT SIDE (NAME DISPLAY) -->
+        <div class="user-name-container">
+          <h1 class="user-name">Mikel Odeyemi</h1>
+        </div>
+
+      </div>
+
+      <div class="btn-wrapper">
+        <input class="message-btn-fill-form" type="button" value="Register">
+      </div>
+
+    </form>
+  </div>
+</div>
+
+    <!-- message Card 3 -->
+    <div class="message-card purple used">
+      <span class="badge">Evergolden Special</span>
+
+      <div class="message-main">
+        <div>
+          <small>X2% Offer</small>
+          <h3>Golden Week</h3>
+          <p>Get a X2 on any deposit higher that $1000</p>
+        </div>
+        <div class="percent">X2%</div>
+      </div>
+
+      <button class="expand-btn">Offer Closed</button>
+
+      <div class="message-expand">
+        <p>Valid for purchases above $120.</p>
+        <button class="apply-btn">Use message</button>
+      </div>
+    </div>
+
+  </div>
+
+
+<!--END OF Message-->
+        </section>
+<!--END OF MIDDLE-->
+
+        <section class="right" style="background-color: none;">
+           <div class="investments" style="width: 95%; height: 80%;  align-items: center;
+    display: flex;               
+    flex-direction: column; justify-content: center; justify-self: center; align-self: center;" >
+          <h2 style="text-align: center; ">No Data</h2>
+            <!--END OF INVESTMENT 9-->
+           </div>
+           <!--END OF INVESTMENT-->
+
+       
+                <!-------------------------  END OF RECENT TRANSACTION--------- -->
+        </section>
+        <!--END OF RIGHT-->
+    </main>
+    <!--===========END OF ASIDE===============-->
+<style>
+ 
+/* MAIN FORM LAYOUT */
+.message-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* LEFT SIDE */
+.form-fields {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* INPUT GROUP */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.danger {
+  font-size: 10px;
+  color: red;
+}
+
+/* INPUT STYLE */
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: #ffffff;
+  font-size: 14px;
+}
+
+/* RIGHT SIDE NAME */
+.user-name-container {
+  flex: 1;
+  min-width: 200px;
+
+  
+  justify-content: center;
+  align-items: center;
+}
+
+.user-message-h1 {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+.user-message-p{
+    font-size: 15px;
+      text-align: center;
+  color: #fff;
+  padding: 0 30px 0 30px;
+}
+
+
+/* BUTTON */
+.btn-wrapper {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.message-btn-fill-form {
+  padding: 12px 20px;
+  border: none;
+  background: #000;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE (MOBILE) */
+@media (max-width: 768px) {
+  .message-form {
+    flex-direction: column;
+  }
+
+  .user-message-h1 {
+    font-size: 22px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.scroll{
+display: none;
+}
+.hidden {
+  display: none;
+}
+
+
+
+
+
+/* Chrome, Edge, Safari */
+.transaction-middle::-webkit-scrollbar {
+  width: 6px;
+}
+
+.transaction-middle::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.transaction-middle::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d4af37, #b8962e);
+  border-radius: 10px;
+}
+
+.transaction-middle::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #b8962e, #9f7f24);
+}
+
+@media screen and (max-width:600px){
+    .right{
+        display: none;
+    }
+
+    .scroll h1{
+        text-align: center;
+    }
+
+
+        .transaction-middle{
+        height: 500px;
+    }
+    main section.middle .cards .card:nth-child(2){
+display: none;
+}
+
+main .transaction-page .transaction{
+            display: grid;
+  grid-template-columns: 135px 135px 1fr;
+}
+
+.deposit-amount{
+    font-size: 12px;
+}
+
+main .transaction-page .card-details .card{
+    width: 4.6rem;
+}
+main section.middle .cards .card:nth-child(3){
+display: none;
+}
+}
+</style>
+
+    <script src="js/user.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/sidebar.js"></script>
+         <script>
+
+document.querySelectorAll(".expand-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const card = btn.closest(".message-card");
+
+    // close other cards
+    document.querySelectorAll(".message-card").forEach(c => {
+      if (c !== card) c.classList.remove("active");
+    });
+
+    // toggle current
+    card.classList.toggle("active");
+
+    btn.innerText = card.classList.contains("active")
+      ? "Close"
+      : "Fill Form";
+  });
+});
+
+  </script>
+          <script>
+        const imageUpload = document.getElementById("imageUpload");
+const previewBox = document.getElementById("previewBox");
+
+imageUpload.addEventListener("change", () => {
+  const file = imageUpload.files[0];
+
+  if (!file) return;
+
+  if (!file.type.startsWith("image/")) {
+    alert("Please upload an image file");
+    imageUpload.value = "";
+    return;
+  }
+
+  const reader = new FileReader();
+
+  reader.onload = (e) => {
+    previewBox.innerHTML = `<img src="${e.target.result}" alt="Preview" />`;
+  };
+
+  reader.readAsDataURL(file);
+});
+
+
+document.getElementById("nokForm").addEventListener("submit", function () {
+  const user = getLoggedInUser();
+  if (!user) return;
+
+  const formKey = `nokFormCompleted_${user.username}`;
+
+  // ✅ THIS is what permanently stops overlay
+  localStorage.setItem(formKey, "true");
+});
+
+    </script>
+</body>
+</html>

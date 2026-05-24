@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id="errorModal" class="error-modal">
+  <div class="error-box">
+    <h3>Something went wrong</h3>
+    <p>We couldn’t complete your request at this time.</p>
+    <button onclick="closeError()">OK</button>
+  </div>
+</div>
+
+
+
+    <style>
+.error-modal {
+  position: fixed;
+  display: flex;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  margin: 10px;
+}
+
+.error-box {
+  background: #884e4e;
+  padding: 20px;
+  width: 320px;
+  border-radius: 8px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.error-box h3 {
+  margin-bottom: 10px;
+  color: #d93025;
+}
+
+.error-box button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  border: none;
+  background: #1a73e8;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+    </style>
+
+
+
+</body>
+</html>
